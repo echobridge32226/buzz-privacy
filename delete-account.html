@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Your Account — Buzz</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f9f9f9;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header .dot {
+      width: 10px; height: 10px;
+      background: #6C63FF;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(108,99,255,0.55);
+    }
+    header h1 { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; }
+    nav { margin-left: auto; display: flex; gap: 16px; }
+    nav a { color: #6C63FF; text-decoration: none; font-size: 14px; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 720px; margin: 40px auto; padding: 0 24px 64px; }
+    h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 4px; }
+    .updated { font-size: 13px; color: #888; margin-bottom: 32px; }
+    section { margin-bottom: 32px; }
+    section h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #1a1a1a; }
+    p, li { font-size: 15px; color: #444; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    hr { border: none; border-top: 1px solid #eee; margin: 32px 0; }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: #333;
+    }
+    .steps li::before {
+      content: counter(step);
+      min-width: 28px;
+      height: 28px;
+      background: #6C63FF;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .cta-box {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 8px;
+    }
+    .cta-box p { margin-bottom: 14px; }
+    .email-link {
+      display: inline-block;
+      background: #6C63FF;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .email-link:hover { background: #574fd6; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+    th { text-align: left; padding: 8px 12px; background: #f4f4f4; font-weight: 600; border: 1px solid #ddd; }
+    td { padding: 8px 12px; border: 1px solid #ddd; color: #444; vertical-align: top; }
+    .tag-del { color: #c0392b; font-weight: 600; }
+    .tag-keep { color: #27ae60; font-weight: 600; }
+    a { color: #6C63FF; }
+    footer { text-align: center; font-size: 13px; color: #aaa; padding: 24px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="dot"></div>
+    <h1>Buzz</h1>
+    <nav>
+      <a href="index.html">Privacy Policy</a>
+      <a href="delete-account.html">Delete Account</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Delete Your Buzz Account</h2>
+    <p class="updated">Last updated: April 19, 2026</p>
+
+    <section>
+      <p>
+        You can request deletion of your Buzz account and all associated data at any time.
+        This page explains how to submit a deletion request, and exactly what data is deleted or retained.
+      </p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3>How to Request Account Deletion</h3>
+      <ol class="steps">
+        <li>Send an email to <strong>echobridge032226@gmail.com</strong> from the email address associated with your Buzz account.</li>
+        <li>Use the subject line: <strong>"Account Deletion Request"</strong></li>
+        <li>Include your registered email address in the body so we can identify your account.</li>
+        <li>We will process your request and confirm deletion within <strong>7 days</strong>.</li>
+      </ol>
+
+      <div class="cta-box" style="margin-top:20px;">
+        <p>Ready to submit your request? Tap the button below to open a pre-filled email.</p>
+        <a class="email-link"
+           href="mailto:echobridge032226@gmail.com?subject=Account%20Deletion%20Request&body=Hi%2C%0A%0AI%20would%20like%20to%20request%20deletion%20of%20my%20Buzz%20account.%0A%0ARegistered%20email%3A%20%5Byour%20email%20here%5D%0A%0AThank%20you.">
+          Email Us to Delete Account
+        </a>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3>What Data Is Deleted</h3>
+      <p>Upon processing your deletion request, we will permanently delete:</p>
+      <table>
+        <tr><th>Data</th><th>Action</th><th>Retention After Request</th></tr>
+        <tr>
+          <td>Your account credentials (email, sign-in info)</td>
+          <td><span class="tag-del">Deleted</span></td>
+          <td>None — deleted within 7 days</td>
+        </tr>
+        <tr>
+          <td>All captioning session records and transcripts</td>
+          <td><span class="tag-del">Deleted</span></td>
+          <td>None — deleted within 7 days</td>
+        </tr>
+        <tr>
+          <td>Session metadata (title, date, word count, language)</td>
+          <td><span class="tag-del">Deleted</span></td>
+          <td>None — deleted within 7 days</td>
+        </tr>
+        <tr>
+          <td>Audio</td>
+          <td><span class="tag-keep">N/A — never stored</span></td>
+          <td>Audio is processed in real time and never recorded or persisted</td>
+        </tr>
+      </table>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3>What Data May Be Retained</h3>
+      <p>We do not retain any personal data after account deletion. No data is kept for analytical or commercial purposes.</p>
+      <p style="margin-top:10px;">
+        Note: Backups held by our infrastructure providers (Firebase / Google Cloud) may retain deleted data for up to <strong>30 additional days</strong> as part of their standard backup rotation before it is permanently purged from all systems.
+      </p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3>Questions</h3>
+      <p>If you have any questions about this process, contact us at <a href="mailto:echobridge032226@gmail.com">echobridge032226@gmail.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Buzz. All rights reserved.</footer>
+</body>
+</html>
