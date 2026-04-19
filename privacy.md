@@ -79,4 +79,4 @@ We may update this Privacy Policy from time to time. We will notify you of signi
 
 If you have questions about this Privacy Policy, contact us at:
 
-**echobridge032226@gmail.com**
+**echobridge32226@gmail.com**
