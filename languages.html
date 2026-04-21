@@ -30,7 +30,7 @@
     nav { margin-left: auto; display: flex; gap: 16px; }
     nav a { color: #6C63FF; text-decoration: none; font-size: 14px; font-weight: 500; }
     nav a:hover { text-decoration: underline; }
-    main { max-width: 720px; margin: 40px auto; padding: 0 24px 64px; }
+    main { max-width: 760px; margin: 40px auto; padding: 0 24px 64px; }
     h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 4px; }
     .updated { font-size: 13px; color: #888; margin-bottom: 32px; }
     section { margin-bottom: 40px; }
@@ -40,6 +40,7 @@
     table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 4px; }
     th { text-align: left; padding: 8px 12px; background: #f4f4f4; font-weight: 600; border: 1px solid #ddd; }
     td { padding: 8px 12px; border: 1px solid #ddd; color: #444; }
+    td.native { color: #666; }
     .badge {
       display: inline-block;
       font-size: 11px;
@@ -75,49 +76,49 @@
       <h3>Transcription</h3>
       <p>Buzz supports live speech-to-text in the languages listed below. The transcription provider is selected automatically — you just pick a language when starting a session.</p>
       <table>
-        <tr><th>Language</th><th>Provider</th></tr>
-        <tr><td>English (U.S.)</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>English (India)</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Multi-language (code-switching)</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Chinese</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Spanish</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Arabic</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Hindi</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Bengali</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Portuguese</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Urdu</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>French</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Indonesian</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Swahili</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Russian</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Punjabi</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>German</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Japanese</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Vietnamese</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Telugu</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Marathi</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Korean</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Tamil</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Turkish</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Italian</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Gujarati</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Kannada</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Thai</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Burmese</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Malayalam</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Ukrainian</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Polish</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Dutch</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Khmer</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Sinhala</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Nepali</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Swedish</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Norwegian</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Danish</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
-        <tr><td>Afrikaans</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Georgian</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Welsh</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
-        <tr><td>Icelandic</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><th>Language</th><th>Native Name</th><th>Provider</th></tr>
+        <tr><td>Afrikaans</td><td class="native">Afrikaans</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Arabic</td><td class="native">العربية</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Bengali</td><td class="native">বাংলা</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Burmese</td><td class="native">မြန်မာဘာသာ</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Chinese</td><td class="native">中文</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Danish</td><td class="native">Dansk</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Dutch</td><td class="native">Nederlands</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>English (India)</td><td class="native">English</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>English (U.S.)</td><td class="native">English</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>French</td><td class="native">Français</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Georgian</td><td class="native">ქართული</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>German</td><td class="native">Deutsch</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Gujarati</td><td class="native">ગુજરાતી</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Hindi</td><td class="native">हिन्दी</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Icelandic</td><td class="native">Íslenska</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Indonesian</td><td class="native">Indonesia</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Italian</td><td class="native">Italiano</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Japanese</td><td class="native">日本語</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Kannada</td><td class="native">ಕನ್ನಡ</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Khmer</td><td class="native">ភាសាខ្មែរ</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Korean</td><td class="native">한국어</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Malayalam</td><td class="native">മലയാളം</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Marathi</td><td class="native">मराठी</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Multi-language (code-switching)</td><td class="native">Multi-language</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Nepali</td><td class="native">नेपाली</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Norwegian</td><td class="native">Norsk</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Polish</td><td class="native">Polski</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Portuguese</td><td class="native">Português</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Punjabi</td><td class="native">ਪੰਜਾਬੀ</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Russian</td><td class="native">Русский</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Sinhala</td><td class="native">සිංහල</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Spanish</td><td class="native">Español</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Swahili</td><td class="native">Kiswahili</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
+        <tr><td>Swedish</td><td class="native">Svenska</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Tamil</td><td class="native">தமிழ்</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Telugu</td><td class="native">తెలుగు</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Thai</td><td class="native">ภาษาไทย</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Turkish</td><td class="native">Türkçe</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Ukrainian</td><td class="native">Українська</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Urdu</td><td class="native">اردو</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Vietnamese</td><td class="native">Tiếng Việt</td><td><span class="badge badge-deepgram">Deepgram</span></td></tr>
+        <tr><td>Welsh</td><td class="native">Cymraeg</td><td><span class="badge badge-gladia">Gladia</span></td></tr>
       </table>
     </section>
 
@@ -127,35 +128,35 @@
       <h3>Translation</h3>
       <p>When translation is enabled for a session, captions are translated in real time to your chosen target language. Translation is routed automatically — DeepL handles its supported languages; Google Translate handles the rest.</p>
       <table>
-        <tr><th>Language</th><th>Provider</th></tr>
-        <tr><td>English (U.S.)</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>English (UK)</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Chinese (Simplified)</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Spanish</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Arabic</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Hindi</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>French</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Bengali</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Portuguese (Brazil)</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Russian</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Indonesian</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Swahili</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>German</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Japanese</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Vietnamese</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Korean</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
-        <tr><td>Turkish</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Italian</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Tamil</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Thai</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Polish</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Dutch</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Ukrainian</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Chinese (Traditional)</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Swedish</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Danish</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Norwegian</td><td><span class="badge badge-google">Google Translate</span></td></tr>
-        <tr><td>Finnish</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><th>Language</th><th>Native Name</th><th>Provider</th></tr>
+        <tr><td>Arabic</td><td class="native">العربية</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Bengali</td><td class="native">বাংলা</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Chinese (Simplified)</td><td class="native">中文</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Chinese (Traditional)</td><td class="native">繁體中文</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Danish</td><td class="native">Dansk</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Dutch</td><td class="native">Nederlands</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>English (UK)</td><td class="native">English</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>English (U.S.)</td><td class="native">English</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Finnish</td><td class="native">Suomi</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>French</td><td class="native">Français</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>German</td><td class="native">Deutsch</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Hindi</td><td class="native">हिन्दी</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Indonesian</td><td class="native">Indonesia</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Italian</td><td class="native">Italiano</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Japanese</td><td class="native">日本語</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Korean</td><td class="native">한국어</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Norwegian</td><td class="native">Norsk</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Polish</td><td class="native">Polski</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Portuguese (Brazil)</td><td class="native">Português</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Russian</td><td class="native">Русский</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Spanish</td><td class="native">Español</td><td><span class="badge badge-deepl">DeepL</span></td></tr>
+        <tr><td>Swahili</td><td class="native">Kiswahili</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Swedish</td><td class="native">Svenska</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Tamil</td><td class="native">தமிழ்</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Thai</td><td class="native">ภาษาไทย</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Turkish</td><td class="native">Türkçe</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Ukrainian</td><td class="native">Українська</td><td><span class="badge badge-google">Google Translate</span></td></tr>
+        <tr><td>Vietnamese</td><td class="native">Tiếng Việt</td><td><span class="badge badge-google">Google Translate</span></td></tr>
       </table>
     </section>
   </main>
