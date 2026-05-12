@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: April 9, 2026**
+**Last updated: May 11, 2026**
 
 This Privacy Policy describes how Buzz ("we", "us", or "our") collects, uses, and shares information when you use the Buzz app ("App").
 
@@ -41,9 +41,13 @@ Buzz uses the following third-party services that may process your data:
 | Service | Purpose | Privacy Policy |
 |---|---|---|
 | **Deepgram** | Speech-to-text transcription (receives audio stream) | [deepgram.com/privacy](https://deepgram.com/privacy) |
+| **Gladia** | Speech-to-text transcription for certain languages (receives audio stream) | [gladia.io/privacy-policy](https://www.gladia.io/privacy-policy) |
+| **Sarvam AI** | Speech-to-text transcription for Indic languages (receives audio stream) | [sarvam.ai/privacy](https://www.sarvam.ai/privacy) |
+| **DeepL** | Transcript translation (receives transcript text) | [deepl.com/privacy](https://www.deepl.com/privacy) |
 | **Firebase (Google)** | Authentication and data storage | [firebase.google.com/support/privacy](https://firebase.google.com/support/privacy) |
+| **RevenueCat** | Subscription and in-app purchase management (receives purchase receipts and subscription status) | [revenuecat.com/privacy](https://www.revenuecat.com/privacy) |
 
-Audio sent to Deepgram is subject to Deepgram's privacy policy. Deepgram does not use your audio to train models unless you have separately opted in to their data sharing program.
+Audio sent to Deepgram, Gladia, or Sarvam AI is used solely for transcription and is subject to each provider's privacy policy. None of these providers use your audio to train models without your explicit consent. Transcript text sent to DeepL for translation is not stored beyond the immediate translation request.
 
 ---
 
