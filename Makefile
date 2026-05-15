@@ -7,7 +7,7 @@ install:
 	$(BUNDLE) install
 
 serve: install
-	$(BUNDLE) exec jekyll serve --open-url
+	$(BUNDLE) exec jekyll serve --baseurl "" --open-url
 
 build: install
 	$(BUNDLE) exec jekyll build

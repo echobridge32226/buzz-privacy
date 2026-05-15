@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }} — Buzz</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
-  <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}?v=2" />
+  <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}?v=2" />
   <style>
     /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -228,15 +228,15 @@
 </head>
 <body>
   <header>
-    <a href="/index.html">
-      <img src="/assets/images/app_icon.png" alt="Buzz" class="header-logo" />
+    <a href="{{ '/index.html' | relative_url }}">
+      <img src="{{ '/assets/images/app_icon.png' | relative_url }}" alt="Buzz" class="header-logo" />
     </a>
-    <a href="/index.html" class="header-title">Buzz</a>
+    <a href="{{ '/index.html' | relative_url }}" class="header-title">Buzz</a>
     <nav>
-      <a href="/index.html" {% if page.url == '/index.html' or page.url == '/' %}class="active"{% endif %}>Privacy Policy</a>
-      <a href="/delete-data.html" {% if page.url == '/delete-data.html' %}class="active"{% endif %}>Delete Data</a>
-      <a href="/delete-account.html" {% if page.url == '/delete-account.html' %}class="active"{% endif %}>Delete Account</a>
-      <a href="/languages.html" {% if page.url == '/languages.html' %}class="active"{% endif %}>Languages</a>
+      <a href="{{ '/index.html' | relative_url }}" {% if page.url == '/index.html' or page.url == '/' %}class="active"{% endif %}>Privacy Policy</a>
+      <a href="{{ '/delete-data.html' | relative_url }}" {% if page.url == '/delete-data.html' %}class="active"{% endif %}>Delete Data</a>
+      <a href="{{ '/delete-account.html' | relative_url }}" {% if page.url == '/delete-account.html' %}class="active"{% endif %}>Delete Account</a>
+      <a href="{{ '/languages.html' | relative_url }}" {% if page.url == '/languages.html' %}class="active"{% endif %}>Languages</a>
     </nav>
   </header>
 
