@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: May 14, 2026**
+**Last updated: May 17, 2026**
 
 This Privacy Policy describes how Buzz ("we", "us", or "our") collects, uses, and shares information when you use the Buzz app ("App"). By using the App, you agree to the practices described in this policy.
 
@@ -37,7 +37,7 @@ We store your subscription plan status, plan expiry date, and remaining usage cr
 ### Crash & Diagnostic Logs
 The App collects error logs (stack traces and application state at the time of a crash) and may upload them to our cloud storage to help us diagnose issues. These logs contain error messages and code references but do not include audio or the content of your transcripts. They may include your account identifier and application version.
 
-If you submit feedback through the App, you have the option to attach a diagnostic log. This log may include backend request records associated with your account from around the time of the issue.
+If you submit feedback through the App, you have the option to attach a diagnostic log. This log may include backend request records associated with your account from around the time of the issue. When you submit feedback, a summary (your account identifier, optional email, platform, app version, and a truncated version of your description) is also sent to our internal **Slack** workspace to alert our team. No audio or transcript content is included in this notification.
 
 ### App Preferences
 Your theme preference (light/dark/system) is stored locally on your device only and is never transmitted to our servers.
@@ -106,6 +106,7 @@ Buzz uses the following third-party services that may process your data:
 | **RevenueCat** | Account identifier, subscription state | Subscription management | [revenuecat.com/privacy](https://www.revenuecat.com/privacy) |
 | **Apple App Store** | Purchase receipt token | In-app purchase verification | [apple.com/legal/privacy](https://www.apple.com/legal/privacy/) |
 | **Google Play** | Purchase receipt token | In-app purchase verification | [policies.google.com/privacy](https://policies.google.com/privacy) |
+| **Slack** | Account identifier, optional email address, feedback description | Internal feedback notifications to our team | [slack.com/trust/privacy/privacy-policy](https://slack.com/trust/privacy/privacy-policy) |
 
 ---
 
