@@ -1,270 +1,121 @@
 ---
 layout: default
-title: Privacy Policy
+title: Live Captions for Every Conversation
 ---
-<h2>Privacy Policy</h2>
-<p class="updated">Last updated: May 14, 2026</p>
+<style>
+  .hero {
+    text-align: center;
+    padding: 60px 0 48px;
+  }
+  .hero-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  }
+  .hero h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #0F1115;
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 17px;
+    color: #6B7280;
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+  .store-badges {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0F1115;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.15s;
+  }
+  .store-badge:hover { background: #1870FF; text-decoration: none; }
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 48px;
+  }
+  .link-card {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 20px;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .link-card:hover {
+    border-color: #1870FF;
+    box-shadow: 0 2px 12px rgba(24,112,255,0.08);
+    text-decoration: none;
+  }
+  .link-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0F1115;
+    margin-bottom: 4px;
+  }
+  .link-card-desc {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.5;
+  }
+</style>
 
-<section>
-  <p>This Privacy Policy describes how Buzz ("we", "us", or "our") collects, uses, and shares information when you use the Buzz app ("App"). By using the App, you agree to the practices described in this policy.</p>
-</section>
+<div class="hero">
+  <img src="{{ '/assets/images/app_icon.png' | relative_url }}" alt="Buzz" class="hero-icon" />
+  <h1>Live Captions for Every Conversation</h1>
+  <p>Real-time speech-to-text in 100+ languages. Buzz transcribes meetings, lectures, and conversations — privately and accurately.</p>
+  <div class="store-badges">
+    <a href="https://apps.apple.com/app/buzz-live-captions/id6743407802" class="store-badge" target="_blank">
+      App Store
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.buzzliveai.buzz" class="store-badge" target="_blank">
+      Google Play
+    </a>
+  </div>
+</div>
 
-<hr />
-
-<section>
-  <h3>1. Information We Collect</h3>
-
-  <h4>Account Information</h4>
-  <p>When you create an account, we collect:</p>
-  <ul>
-    <li>Your <strong>email address</strong></li>
-    <li>Your <strong>display name</strong> (if provided via Google Sign-In; optional otherwise)</li>
-  </ul>
-  <p>We do not collect your phone number, postal address, or any other personal identifiers at signup.</p>
-
-  <h4>Audio</h4>
-  <p>When you use live captioning, your device microphone audio is streamed in real time to our servers. <strong>Audio is never recorded, written to disk, or stored.</strong> It is held briefly in memory during transcription and discarded immediately afterwards. When the session ends, all in-memory audio buffers are cleared.</p>
-  <p>When you import an audio file for transcription, that file is transmitted to our server, transcribed in memory, and discarded. Files are not retained after transcription is complete.</p>
-
-  <h4>Transcripts</h4>
-  <p>The text output of your captioning sessions is stored in our database so you can access your session history. Transcripts are stored in encrypted form. Sessions are automatically deleted based on your subscription plan (see Data Retention). You can also delete any session at any time from within the App.</p>
-  <p>If translation is enabled, the translated text is stored alongside the original transcript under the same retention rules.</p>
-
-  <h4>Speaker Labels</h4>
-  <p>If you use speaker diarization, speaker identifiers and any custom names you assign to speakers are stored as part of your session data and deleted with it.</p>
-
-  <h4>Usage Data</h4>
-  <p>We track how much transcription time you use within each day and month to enforce your plan limits. This data is associated with your account and deleted when your account is deleted.</p>
-
-  <h4>Subscription &amp; Billing</h4>
-  <p>We store your subscription plan status, plan expiry date, and remaining usage credits. We retain billing transaction records (product ID, platform, and receipt token) for fraud prevention and to avoid double-processing purchases. <strong>We do not store your credit card number or full payment details</strong> — all payment processing is handled by Apple, Google, or RevenueCat.</p>
-
-  <h4>Crash &amp; Diagnostic Logs</h4>
-  <p>The App collects error logs (stack traces and application state at the time of a crash) and may upload them to our cloud storage to help us diagnose issues. These logs contain error messages and code references but do not include audio or the content of your transcripts. They may include your account identifier and application version.</p>
-  <p>If you submit feedback through the App, you have the option to attach a diagnostic log. This log may include backend request records associated with your account from around the time of the issue.</p>
-
-  <h4>App Preferences</h4>
-  <p>Your theme preference (light/dark/system) is stored locally on your device only and is never transmitted to our servers.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>2. How We Use Your Information</h3>
-  <p>We use the information we collect to:</p>
-  <ul>
-    <li>Authenticate you and maintain your account</li>
-    <li>Provide real-time speech-to-text captioning and translation</li>
-    <li>Store and display your session history</li>
-    <li>Enforce subscription plan limits and track usage</li>
-    <li>Process and verify in-app purchases</li>
-    <li>Investigate crashes and improve app stability</li>
-    <li>Respond to feedback and support requests</li>
-  </ul>
-  <p>We do not sell your personal information. We do not use your audio or transcripts to train AI models.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>3. Microphone &amp; Audio Processing</h3>
-  <p>Buzz requires microphone access to provide live captioning. When you start a session:</p>
-  <ul>
-    <li>Your device microphone is activated</li>
-    <li>Audio is captured continuously and streamed in real time over an encrypted connection to our servers</li>
-    <li>Our servers immediately forward the audio to a speech recognition provider for transcription</li>
-    <li><strong>Audio is never written to disk</strong> — it passes through server memory only and is discarded when the session ends</li>
-  </ul>
-  <p>Audio is processed by one of the following providers, depending on the language you select:</p>
-  <ul>
-    <li><strong><a href="https://deepgram.com" target="_blank">Deepgram</a></strong> — English and multilingual sessions</li>
-    <li><strong><a href="https://www.gladia.io" target="_blank">Gladia</a></strong> — multilingual and code-switching sessions</li>
-    <li><strong><a href="https://www.sarvam.ai" target="_blank">Sarvam AI</a></strong> — Indic languages (Hindi, Tamil, Bengali, and others)</li>
-    <li><strong><a href="https://cloud.google.com/speech-to-text" target="_blank">Google Cloud Speech-to-Text</a></strong> — select languages</li>
-  </ul>
-  <p>Each provider processes audio solely to return a transcript. None of these providers use your audio to train their models without your explicit opt-in through their own terms. See Section 5 for links to their privacy policies.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>4. AI Processing Disclosure</h3>
-  <p>Buzz uses third-party AI systems for transcription and translation. Please be aware:</p>
-  <ul>
-    <li>Transcription and translation are performed by automated AI systems and may contain errors</li>
-    <li>Audio is processed by one of the speech recognition providers listed in this policy</li>
-    <li>Transcript text may be processed by one of the translation providers listed in this policy</li>
-    <li>These providers may process your data in countries other than your own (see Section 9)</li>
-    <li>We are not responsible for inaccuracies in AI-generated outputs</li>
-  </ul>
-</section>
-
-<hr />
-
-<section>
-  <h3>5. Third-Party Services</h3>
-  <p>Buzz uses the following third-party services that may process your data:</p>
-  <table>
-    <tr><th>Service</th><th>Data Sent</th><th>Purpose</th><th>Privacy Policy</th></tr>
-    <tr>
-      <td><strong>Deepgram</strong></td>
-      <td>Audio stream</td>
-      <td>Speech-to-text transcription</td>
-      <td><a href="https://deepgram.com/privacy" target="_blank">deepgram.com/privacy</a></td>
-    </tr>
-    <tr>
-      <td><strong>Gladia</strong></td>
-      <td>Audio stream</td>
-      <td>Speech-to-text (multilingual)</td>
-      <td><a href="https://www.gladia.io/privacy-policy" target="_blank">gladia.io/privacy-policy</a></td>
-    </tr>
-    <tr>
-      <td><strong>Sarvam AI</strong></td>
-      <td>Audio stream; transcript text</td>
-      <td>Speech-to-text and translation (Indic languages)</td>
-      <td><a href="https://www.sarvam.ai/privacy" target="_blank">sarvam.ai/privacy</a></td>
-    </tr>
-    <tr>
-      <td><strong>Google Cloud</strong></td>
-      <td>Audio stream; transcript text</td>
-      <td>Speech-to-text and translation (select languages)</td>
-      <td><a href="https://cloud.google.com/security/privacy" target="_blank">cloud.google.com/security/privacy</a></td>
-    </tr>
-    <tr>
-      <td><strong>DeepL</strong></td>
-      <td>Transcript text</td>
-      <td>Translation</td>
-      <td><a href="https://www.deepl.com/privacy" target="_blank">deepl.com/privacy</a></td>
-    </tr>
-    <tr>
-      <td><strong>Firebase (Google)</strong></td>
-      <td>Account info, session data</td>
-      <td>Authentication and database storage</td>
-      <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
-    </tr>
-    <tr>
-      <td><strong>RevenueCat</strong></td>
-      <td>Account identifier, subscription state</td>
-      <td>Subscription management</td>
-      <td><a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></td>
-    </tr>
-    <tr>
-      <td><strong>Apple App Store</strong></td>
-      <td>Purchase receipt token</td>
-      <td>In-app purchase verification</td>
-      <td><a href="https://www.apple.com/legal/privacy/" target="_blank">apple.com/legal/privacy</a></td>
-    </tr>
-    <tr>
-      <td><strong>Google Play</strong></td>
-      <td>Purchase receipt token</td>
-      <td>In-app purchase verification</td>
-      <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
-    </tr>
-  </table>
-</section>
-
-<hr />
-
-<section>
-  <h3>6. Payments &amp; Subscriptions</h3>
-  <p>Buzz offers subscriptions (Basic, Pro) and prepaid credit packs via in-app purchase on iOS and Android.</p>
-  <ul>
-    <li>All payment transactions are processed by <strong><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple App Store</a></strong> (iOS) or <strong><a href="https://policies.google.com/privacy" target="_blank">Google Play</a></strong> (Android)</li>
-    <li>We use <strong><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat</a></strong> to manage subscription status and entitlements</li>
-    <li><strong>We never receive or store your credit card number or full payment details</strong></li>
-    <li>We store: your subscription plan type, expiry date, and a transaction reference ID used for purchase verification</li>
-    <li>To cancel a subscription, do so directly through the App Store or Google Play; access continues until the current billing period ends</li>
-  </ul>
-</section>
-
-<hr />
-
-<section>
-  <h3>7. Data Retention</h3>
-  <table>
-    <tr><th>Data Type</th><th>Retention</th></tr>
-    <tr><td>Audio</td><td>Never stored — discarded immediately after transcription</td></tr>
-    <tr><td>Transcripts &amp; translations</td><td>Auto-deleted by plan tier (see below)</td></tr>
-    <tr><td>Session metadata &amp; speaker labels</td><td>Deleted with the session</td></tr>
-    <tr><td>Account information</td><td>Until you delete your account</td></tr>
-    <tr><td>Usage tracking</td><td>Until you delete your account</td></tr>
-    <tr><td>Subscription &amp; billing records</td><td>Until you delete your account</td></tr>
-    <tr><td>Crash &amp; diagnostic logs</td><td>Stored in cloud storage; no automatic deletion schedule currently in place</td></tr>
-    <tr><td>Feedback submissions &amp; attached logs</td><td>Stored in cloud storage; no automatic deletion schedule currently in place</td></tr>
-  </table>
-
-  <h4>Session Transcript Retention by Plan</h4>
-  <table style="margin-top:8px;">
-    <tr><th>Plan</th><th>History kept for</th></tr>
-    <tr><td>Free</td><td>7 days after the session ends</td></tr>
-    <tr><td>Basic</td><td>30 days after the session ends</td></tr>
-    <tr><td>Pro</td><td>90 days after the session ends</td></tr>
-  </table>
-  <p style="margin-top:10px;">Sessions older than the plan limit are automatically and permanently deleted, including all associated transcript segments, speaker labels, and cloud exports. You can delete any session at any time from within the App.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>8. Data Security</h3>
-  <p>We take the following measures to protect your data:</p>
-  <ul>
-    <li>All data is transmitted over encrypted connections (HTTPS/TLS)</li>
-    <li>Transcript text is encrypted at rest using AES-256 encryption before being stored in our database</li>
-    <li>Access to our backend requires a verified authentication token for every request</li>
-    <li>Third-party API credentials are stored as server-side environment variables and are never exposed to the App</li>
-    <li>Payment processing is handled entirely by Apple, Google, and RevenueCat — your payment details never reach our servers</li>
-  </ul>
-  <p>No system is completely secure. If you believe your data has been compromised, please contact us immediately.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>9. International Data Transfers</h3>
-  <p>Buzz uses providers that may process your data outside your country of residence:</p>
-  <ul>
-    <li><strong><a href="https://deepgram.com/privacy" target="_blank">Deepgram</a></strong> and <strong><a href="https://cloud.google.com/security/privacy" target="_blank">Google</a></strong> are US-based and process data in the United States</li>
-    <li><strong><a href="https://www.deepl.com/privacy" target="_blank">DeepL</a></strong> is based in Germany and processes data within the European Union</li>
-    <li><strong><a href="https://www.gladia.io/privacy-policy" target="_blank">Gladia</a></strong> and <strong><a href="https://www.sarvam.ai/privacy" target="_blank">Sarvam AI</a></strong> — refer to their individual privacy policies for current details on processing regions</li>
-    <li><strong><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google Cloud)</a></strong> stores account and session data in Google-managed data centers</li>
-    <li>Our backend servers are hosted on <strong><a href="https://railway.com/legal/privacy-policy" target="_blank">Railway</a></strong>, which may process request metadata in accordance with their privacy policy</li>
-  </ul>
-  <p>By using the App, you acknowledge that your data may be transferred to and processed in countries that may have different data protection laws than your country of residence.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>10. Your Rights</h3>
-  <p>You may at any time:</p>
-  <ul>
-    <li><strong>Access</strong> your session transcripts from within the App</li>
-    <li><strong>Delete</strong> individual sessions from within the App, or request full account deletion</li>
-    <li><strong>Edit</strong> individual transcript segments within the App</li>
-  </ul>
-  <p>To request deletion of your entire account and all associated data, email <a href="mailto:echobridge32226@gmail.com"><strong>echobridge32226@gmail.com</strong></a> with the subject line "Account Deletion Request." We will process your request within 7 days. Backups held by our infrastructure providers (Firebase / Google Cloud) may retain deleted data for up to 30 additional days before it is permanently purged.</p>
-  <p>If you are located in the European Union or California, you may have additional rights under the GDPR or CCPA/CPRA respectively. Contact us at the address below to make a request.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>11. Children's Privacy</h3>
-  <p>Buzz is not directed at children under 13. We do not knowingly collect personal information from anyone under 13. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>12. Changes to This Policy</h3>
-  <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last updated" date at the top of this page. Continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
-</section>
-
-<hr />
-
-<section>
-  <h3>13. Contact</h3>
-  <p>If you have questions or requests regarding this Privacy Policy, contact us at:<br />
-  <strong><a href="mailto:echobridge32226@gmail.com">echobridge32226@gmail.com</a></strong></p>
-</section>
+<div class="links-grid">
+  <a href="{{ '/privacy.html' | relative_url }}" class="link-card">
+    <div class="link-card-title">Privacy Policy</div>
+    <div class="link-card-desc">How we collect, use, and protect your data</div>
+  </a>
+  <a href="{{ '/terms.html' | relative_url }}" class="link-card">
+    <div class="link-card-title">Terms of Service</div>
+    <div class="link-card-desc">Rules and conditions for using Buzz</div>
+  </a>
+  <a href="{{ '/delete-data.html' | relative_url }}" class="link-card">
+    <div class="link-card-title">Delete Data</div>
+    <div class="link-card-desc">Request deletion of your session data</div>
+  </a>
+  <a href="{{ '/delete-account.html' | relative_url }}" class="link-card">
+    <div class="link-card-title">Delete Account</div>
+    <div class="link-card-desc">Permanently remove your account and all data</div>
+  </a>
+  <a href="{{ '/languages.html' | relative_url }}" class="link-card">
+    <div class="link-card-title">Supported Languages</div>
+    <div class="link-card-desc">Full list of languages available for transcription</div>
+  </a>
+</div>
