@@ -1,0 +1,359 @@
+---
+layout: default
+title: Use Cases
+description: Discover how Buzz Captions helps in meetings, classrooms, travel, accessibility, journalism, podcasts, and more.
+full_width: true
+---
+<style>
+.uc-hero { background: linear-gradient(160deg,#fff 0%,var(--blue-xlight) 60%,var(--bg) 100%); padding:72px 0 60px; }
+.uc-section { padding: 72px 0; }
+.uc-section.alt { background: var(--surface); }
+.uc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.uc-row.flip { direction: rtl; }
+.uc-row.flip > * { direction: ltr; }
+.uc-screenshot { position: relative; display: flex; justify-content: center; }
+.uc-screenshot img {
+  max-width: 220px;
+  border-radius: 28px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.14), 0 4px 16px rgba(0,0,0,0.08);
+}
+.uc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.feature-bullet { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 14px; color: #374151; }
+.feature-bullet svg { color: var(--blue); flex-shrink: 0; margin-top: 2px; }
+@media (max-width: 768px) {
+  .uc-row { grid-template-columns: 1fr; gap: 32px; }
+  .uc-row.flip { direction: ltr; }
+}
+</style>
+
+<div class="uc-hero">
+  <div class="container">
+    <div class="section-tag">Use Cases</div>
+    <h1>Built for every conversation<br>you need to capture</h1>
+    <p style="font-size:18px;color:var(--text-muted);max-width:560px;margin-top:12px">Whether you're in a boardroom, a lecture hall, or a taxi in Tokyo — Buzz gives you words when you need them.</p>
+  </div>
+</div>
+
+<!-- Meetings -->
+<div class="uc-section">
+  <div class="container">
+    <div class="uc-row">
+      <div>
+        <div class="uc-tags">
+          <span class="badge badge-blue">Speaker diarization</span>
+          <span class="badge badge-blue">Session history</span>
+          <span class="badge badge-blue">PDF export</span>
+        </div>
+        <div class="section-tag">🎙️ Meetings</div>
+        <h2>Never miss a decision<br>in a meeting again</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Buzz automatically labels every speaker, timestamps every statement, and saves the full transcript to your history. Review what was decided, by whom, and when — without taking notes.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Speaker diarization labels each voice (rename "Speaker 1" → "Alice")
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Group sessions let up to 10 participants join via QR code
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Export the full transcript as PDF with speaker labels and timestamps
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Searchable history kept for 7–90 days depending on plan
+        </div>
+      </div>
+      <div class="uc-screenshot">
+        <img src="{{ '/assets/images/screenshots/live-captions.png' | relative_url }}" alt="Live captions with translation" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lectures -->
+<div class="uc-section alt">
+  <div class="container">
+    <div class="uc-row flip">
+      <div>
+        <div class="uc-tags">
+          <span class="badge badge-blue">40+ languages</span>
+          <span class="badge badge-blue">Real-time</span>
+          <span class="badge badge-blue">History</span>
+        </div>
+        <div class="section-tag">🎓 Lectures &amp; Classrooms</div>
+        <h2>Follow every word,<br>in any language</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Students with hearing difficulties or language barriers can follow lectures word-for-word in real time. International students can caption in the lecture language and translate simultaneously.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Real-time captions appear as the professor speaks
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Translate from any lecture language to your own
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Save the full lecture transcript to review later
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Adjustable text size for comfort reading on any device
+        </div>
+      </div>
+      <div class="uc-screenshot">
+        <img src="{{ '/assets/images/screenshots/history.png' | relative_url }}" alt="Session history" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Travel -->
+<div class="uc-section">
+  <div class="container">
+    <div class="uc-row">
+      <div>
+        <div class="uc-tags">
+          <span class="badge badge-blue">Live translation</span>
+          <span class="badge badge-blue">40+ languages</span>
+        </div>
+        <div class="section-tag">✈️ Travel &amp; Conversations</div>
+        <h2>Speak any language.<br>Understand everything.</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Point your phone at any conversation and read captions in your language in real time. Order food, navigate directions, chat with locals — without a phrasebook.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Real-time translation via Sarvam, DeepL, and Google Translate
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Supports Japanese, Chinese, Arabic, Korean, Thai, and 35+ more
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Both original and translated text shown side by side
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Session saved for reference after the conversation
+        </div>
+      </div>
+      <div class="uc-screenshot">
+        <img src="{{ '/assets/images/screenshots/new-session.png' | relative_url }}" alt="New session with translation" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Accessibility -->
+<div class="uc-section alt">
+  <div class="container">
+    <div class="uc-row flip">
+      <div>
+        <div class="uc-tags">
+          <span class="badge badge-blue">Real-time</span>
+          <span class="badge badge-blue">Adjustable text</span>
+          <span class="badge badge-blue">Always-on</span>
+        </div>
+        <div class="section-tag">♿ Accessibility</div>
+        <h2>Live captions for the<br>deaf and hard of hearing</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Buzz gives real-time access to spoken conversation for people who are deaf or hard of hearing. No reliance on platform-specific caption tools — works anywhere, with any speaker.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Instant captions as speech happens — sub-second latency
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Adjustable text size (A− / A+) for comfortable reading
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Screen stays on during active sessions (wakelock)
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Works anywhere — not limited to specific apps or video calls
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          One tap flips the captions 180° — set the phone flat, and whoever's sitting opposite reads them naturally
+        </div>
+      </div>
+      <div class="uc-screenshot">
+        <img src="{{ '/assets/images/screenshots/live-captions.png' | relative_url }}" alt="Live captions screen" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dinner table -->
+<div class="uc-section">
+  <div class="container">
+    <div class="uc-row">
+      <div>
+        <div class="uc-tags">
+          <span class="badge badge-blue">Group session</span>
+          <span class="badge badge-blue">Up to 10 people</span>
+          <span class="badge badge-blue">Accessibility</span>
+        </div>
+        <div class="section-tag">🍽️ Dinner Table</div>
+        <h2>No one left out of<br>the conversation</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">"Dinner table syndrome" is the experience many deaf and hard-of-hearing people know too well — sitting at a family meal, surrounded by conversation, but unable to follow it. Buzz's group sessions change that.</p>
+        <p style="font-size:15px;color:var(--text-muted);margin-bottom:24px">Everyone at the table opens Buzz on their own phone and joins the same group session. Each person speaks into their own device — their voice is transcribed in real time and appears as captions on every screen. One conversation, everyone included.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Each person speaks into their own phone — no shared microphone needed
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Up to 10 people can join a single session via QR code or join code
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Every speaker's voice is transcribed separately and labelled
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Works across languages — each participant can speak in their own language
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Adjustable text size so captions are easy to read at a glance
+        </div>
+      </div>
+      <div class="uc-screenshot">
+        <img src="{{ '/assets/images/screenshots/home.png' | relative_url }}" alt="Group session option on home screen" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Voice Notes -->
+<div class="uc-section alt">
+  <div class="container">
+    <div class="uc-row">
+      <div>
+        <div class="uc-tags">
+          <span class="badge badge-blue">WhatsApp</span>
+          <span class="badge badge-blue">Telegram</span>
+          <span class="badge badge-blue">iMessage</span>
+          <span class="badge badge-blue">50 MB</span>
+        </div>
+        <div class="section-tag">💬 Voice Notes &amp; Messages</div>
+        <h2>Turn voice messages<br>into readable text</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Received a long WhatsApp voice note you can't listen to right now? Import it into Buzz and get a complete, speaker-labeled transcript in seconds. Works with OGG, M4A, CAF, and more.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Supports WhatsApp (.ogg), Telegram (.ogg), iMessage (.caf), and standard formats
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Files up to 50 MB, powered by Deepgram prerecorded
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Speaker diarization always on — know who said what
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Optional translation at upload — read it in your language
+        </div>
+      </div>
+      <div class="uc-screenshot">
+        <img src="{{ '/assets/images/screenshots/home.png' | relative_url }}" alt="Home — import audio file" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Grid of remaining use cases -->
+<div class="uc-section">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <div class="section-tag">More</div>
+      <h2>And much more</h2>
+      <p>Buzz adapts to wherever spoken words need to become written ones.</p>
+    </div>
+    <div class="usecase-grid">
+      <div class="usecase-card reveal">
+        <span class="usecase-icon">🎙</span>
+        <h3>Podcasts &amp; Interviews</h3>
+        <p>Upload your recording after the fact and get a full speaker-diarized transcript. Edit it inline and export to PDF.</p>
+        <div class="usecase-tags">
+          <span class="usecase-tag">Voice note import</span>
+          <span class="usecase-tag">Speaker diarization</span>
+          <span class="usecase-tag">PDF export</span>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <span class="usecase-icon">📰</span>
+        <h3>Journalists &amp; Researchers</h3>
+        <p>Record interviews, transcribe them instantly, and export an accurate source document. Quote with confidence.</p>
+        <div class="usecase-tags">
+          <span class="usecase-tag">Accurate transcription</span>
+          <span class="usecase-tag">Editable segments</span>
+          <span class="usecase-tag">PDF export</span>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <span class="usecase-icon">🌐</span>
+        <h3>International Teams</h3>
+        <p>Teams that work across languages can caption in any language and translate in real time so everyone stays aligned.</p>
+        <div class="usecase-tags">
+          <span class="usecase-tag">Live translation</span>
+          <span class="usecase-tag">Group sessions</span>
+          <span class="usecase-tag">40+ languages</span>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <span class="usecase-icon">🎤</span>
+        <h3>Live Events &amp; Conferences</h3>
+        <p>Attendees can follow live keynotes, panels, or Q&As in their own language with real-time captions.</p>
+        <div class="usecase-tags">
+          <span class="usecase-tag">Real-time captions</span>
+          <span class="usecase-tag">Live translation</span>
+          <span class="usecase-tag">Group join</span>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <span class="usecase-icon">🎬</span>
+        <h3>Content Creators</h3>
+        <p>Transcribe your recordings for subtitles, show notes, or blog posts. Export clean text or structured PDFs.</p>
+        <div class="usecase-tags">
+          <span class="usecase-tag">Voice note import</span>
+          <span class="usecase-tag">Plain text share</span>
+          <span class="usecase-tag">PDF export</span>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <span class="usecase-icon">🏥</span>
+        <h3>Healthcare &amp; Support</h3>
+        <p>Patient conversations, intake calls, or remote sessions can be captioned in real time for better communication.<br><span style="font-size:12px;color:var(--text-xmuted)">Note: Not suitable for diagnostic or clinical documentation.</span></p>
+        <div class="usecase-tags">
+          <span class="usecase-tag">Real-time captions</span>
+          <span class="usecase-tag">Private by design</span>
+          <span class="usecase-tag">Speaker labels</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section">
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2>Your use case, covered.</h2>
+      <p>Start free — 60 minutes a day, no credit card.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="/download.html" class="store-badge">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          iPhone — App Store
+        </a>
+        <span class="store-badge" style="opacity:0.45;cursor:default">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M3.18 23.76c.33.18.7.19 1.05.02l11.62-6.54-2.67-2.67-9.99 9.19M.5 1.26C.18 1.62 0 2.16 0 2.85v18.3c0 .69.18 1.23.51 1.59l.08.08 10.25-10.25v-.24L.58 1.18.5 1.26M16.6 11.28 13.28 8l-12.77 7.2 3.35 3.35 12.74-7.27M21.43 10.5l-3.05-1.72-3.62 3.62 3.62 3.62 3.05-1.73c.87-.49.87-1.29 0-1.79z"/></svg>
+          Android — coming soon
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,189 @@
+---
+layout: default
+title: FAQ
+description: Frequently asked questions about Buzz Captions — languages, accuracy, privacy, billing, export, and more.
+full_width: true
+---
+<style>
+.faq-hero { background: linear-gradient(160deg,#fff 0%,var(--blue-xlight) 60%,var(--bg) 100%); padding:72px 0 60px; }
+.faq-cats { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 48px; }
+.faq-cat-btn {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.faq-cat-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+.faq-cat-btn:hover:not(.active) { border-color: var(--blue); color: var(--blue); }
+.faq-group { margin-bottom: 48px; }
+.faq-group-title { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border-subtle); }
+</style>
+
+<div class="faq-hero">
+  <div class="container">
+    <div class="section-tag">FAQ</div>
+    <h1>Frequently asked<br>questions</h1>
+    <p style="font-size:18px;color:var(--text-muted);max-width:500px;margin-top:12px">Everything you need to know about Buzz Captions — from how it works to billing and privacy.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container-sm">
+
+    <!-- Languages -->
+    <div class="faq-group">
+      <div class="faq-group-title">Languages &amp; Accuracy</div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button class="faq-q">Which languages are supported for transcription? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Buzz supports 40+ languages across four STT providers. Western languages (English, Spanish, French, German, Japanese, Chinese, Korean, Arabic, and more) are powered by Deepgram. Indic languages (Hindi, Bengali, Tamil, Telugu, Kannada, Malayalam, Marathi, Gujarati, Punjabi, and more) are powered by Sarvam AI. Some additional languages use Gladia. <a href="{{ '/languages.html' | relative_url }}">See the full language list →</a></div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Are there any language restrictions by plan? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Yes. The Free plan is restricted to English (US, India, UK, Australia). Basic and Pro plans support all 40+ available languages.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Which languages can I translate to? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Translation is available on Basic and Pro plans. Basic supports translation to English only. Pro supports translation to any available target language, including English, Spanish, French, German, Japanese, Chinese, Korean, Arabic, Portuguese, Hindi, and all Indic languages via Sarvam. Translation is not available on the Free plan.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">What is transliteration for Indic languages? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">For Indic languages like Hindi, Tamil, Bengali, and others, you can choose between native script output (e.g., हिन्दी) or Roman/Latin transliteration (e.g., "Mera naam Rohit hai"). Transliteration makes the text readable without knowing the native script. Both modes use Sarvam's saaras:v3 model.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">How accurate is the transcription? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Accuracy varies by language, accent, audio quality, and background noise. Under ideal conditions (clear speech, low background noise), Deepgram Nova-3 achieves very high accuracy for English and major Western languages. Sarvam performs well for Indic languages. Results are best effort — Buzz is not suitable for legally binding, medical, or safety-critical transcription. You can always edit any segment inline.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Does Buzz support multi-language or code-switching sessions? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Yes. You can select multi-language modes that handle sessions where speakers switch between languages. Gladia supports up to 10 language hints for code-switching. Deepgram and Google also offer multi-language detection modes. Select "Multi-language" from the language picker when starting a session.</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sessions & Features -->
+    <div class="faq-group">
+      <div class="faq-group-title">Sessions &amp; Features</div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button class="faq-q">What types of sessions does Buzz support? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Buzz supports three session types: <strong>Solo</strong> (one person, live microphone), <strong>Group</strong> (up to 10 participants, each with their own audio stream, joined via QR code or 6-character code), and <strong>Voice Note</strong> (upload a pre-recorded audio file for batch transcription).</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">How long can a session last? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">A single session can last up to 4 hours (240 minutes). This is a hard cap regardless of your plan. Sessions auto-end when this limit is reached. For longer events, you can start a new session.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">What audio formats can I upload? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Buzz supports MP3, M4A, AAC, OGG (WhatsApp and Telegram), WAV, WebM, FLAC, CAF (iMessage/iOS), and MP4. The maximum file size is 50 MB. Uploaded audio is routed to the best provider for the selected language: Deepgram (non-Indic languages, with speaker diarization) or Sarvam (Indic languages like Hindi, Tamil, Bengali, etc.).</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Can I edit my transcript after the session? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Yes. You can tap any transcript segment in the session history to edit it inline. You can fix words, correct speaker names, or delete segments. Edits are saved server-side and persist across devices.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Is speaker diarization available for all languages? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Speaker diarization is available for all languages processed by Deepgram (Western languages: English, Spanish, French, German, Japanese, etc.). It is <strong>not available</strong> for Indic languages processed by Sarvam AI. For uploaded Indic-language voice notes (routed via Sarvam), speaker diarization is not supported.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Does Buzz work offline? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">No. Buzz requires an active internet connection for all features. Transcription, translation, session history, and account management all require connectivity. There is no offline mode.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Does Buzz work on iPad or desktop? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Buzz is available for iPhone (iOS 16+). The Android app (Android 7.0+) is currently in closed testing — public release coming soon. The app is not available for desktop or web browsers.</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Export -->
+    <div class="faq-group">
+      <div class="faq-group-title">Export &amp; Sharing</div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button class="faq-q">What export formats are available? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Export and sharing requires the Pro plan. Pro users can share as plain text, export as a formatted PDF with speaker labels, timestamps, word count, and multi-script font support. Free and Basic plans have no export or sharing functionality.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Do exported PDFs support non-Latin scripts? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Yes. Buzz uses Google's Noto Sans font family for PDF export, which covers Devanagari, Tamil, Telugu, Kannada, Malayalam, Bengali, Gujarati, Gurmukhi, Arabic, Thai, Sinhala, Khmer, Myanmar, Georgian, Hebrew, CJK (Chinese/Japanese/Korean), and Latin scripts.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Can I share a session transcript with someone else? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Export and sharing is Pro-only. On the Pro plan, use the share button to share as plain text via any app (WhatsApp, email, Messages, etc.), or export as a PDF. There is no public session link or URL sharing.</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Privacy -->
+    <div class="faq-group">
+      <div class="faq-group-title">Privacy &amp; Data</div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button class="faq-q">Is my audio recorded or stored? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><strong>No.</strong> Audio is never written to disk or stored anywhere. It passes through server memory only — streamed to the STT provider and discarded immediately when the session ends. All in-memory audio buffers are cleared at session close.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Are my transcripts encrypted? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Yes. Transcript text is encrypted with AES-256 before being stored in Firestore. The encryption key is held server-side and never sent to the app.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">How long is my session history kept? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Session retention depends on your plan: Free keeps sessions for 7 days, Basic for 30 days, and Pro for 90 days. Sessions older than your limit are automatically and permanently deleted, including all transcript segments, speaker labels, and associated exports. You can also delete any session manually at any time.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Is my data used to train AI models? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">
+            <p>Buzz does not operate any proprietary AI models, so we have no means to train on your data ourselves.</p>
+            <p>For the third-party providers that process your audio and transcripts (Deepgram, Sarvam, Gladia, Google, DeepL), we are actively working to confirm and enforce data-processing agreements that prohibit your data from being used for model training. This is an ongoing process — we will update this page as agreements are finalised. In the meantime, refer to each provider's privacy policy for their current stance on training data use.</p>
+            <p>See the <a href="{{ '/trust.html' | relative_url }}">Privacy &amp; Trust page</a> and our <a href="{{ '/privacy.html' | relative_url }}">Privacy Policy</a> for full details.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">How do I delete my account and all my data? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">You can request account deletion via the <a href="{{ '/delete-account.html' | relative_url }}">Delete Account page</a> or by going to Settings → Profile → Delete Account in the app. We'll process your request within 7 days and delete all associated sessions, transcripts, usage data, and your Firebase Auth record.</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Billing -->
+    <div class="faq-group">
+      <div class="faq-group-title">Billing &amp; Credits</div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button class="faq-q">What happens when I hit my daily limit? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">You won't be able to start new sessions until your quota resets at midnight (in your local timezone). If you have a credit pack, credits are used automatically when your plan quota runs out — so you can keep going seamlessly. If you have no credits, you'll be prompted to purchase a pack or upgrade.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">What are credit packs? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Credit packs are one-time purchases that add extra transcription time to your account. They work on any plan and are consumed after your plan's included quota runs out. Available packs: 15 minutes, 60 minutes, 120 minutes, and 300 minutes. Credits expire 60 days from purchase and are non-refundable.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">How do I cancel my subscription? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Cancel through your App Store (iOS) or Google Play (Android) account settings. You'll retain access to your current plan until the end of the billing period, then automatically return to the Free plan. We don't handle billing directly — all subscriptions are managed by Apple or Google.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Are there refunds? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Refund eligibility is determined by Apple or Google, not by us. For subscriptions, submit a refund request through the App Store or Google Play. Credit packs are non-refundable once purchased.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q">Why can't I start a new session even though I have credits? <svg class="faq-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Credits are consumed <em>during</em> a session when your plan quota runs out — not at the start. If you've already used your daily/monthly quota and have credits remaining, you can still start a new session. If you see a "limit reached" message, check that your credits haven't expired (60-day expiry).</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="background:var(--blue-xlight);border:1px solid var(--blue-light);border-radius:var(--radius-xl);padding:32px;text-align:center;margin-top:32px">
+      <h3 style="margin-bottom:8px">Still have questions?</h3>
+      <p style="color:var(--text-muted);font-size:15px;margin-bottom:20px">We're happy to help via email.</p>
+      <a href="{{ '/contact.html' | relative_url }}" class="btn btn-primary">Contact us</a>
+    </div>
+
+  </div>
+</div>

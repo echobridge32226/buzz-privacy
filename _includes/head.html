@@ -1,0 +1,30 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{% if page.title %}{{ page.title }} — Buzz Captions{% else %}Buzz Captions — Live AI Captions for Every Conversation{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Real-time AI speech-to-text in 40+ languages. Instant captions, live translation, speaker diarization — on iOS and Android.{% endif %}" />
+<meta name="theme-color" content="#1870FF" />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{% if page.title %}{{ page.title }} — Buzz Captions{% else %}Buzz Captions — Live AI Captions{% endif %}" />
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Real-time AI speech-to-text in 40+ languages. iOS & Android.{% endif %}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:site_name" content="Buzz Captions" />
+<meta property="og:image" content="{{ site.url }}/assets/images/app_icon.png" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} — Buzz Captions{% else %}Buzz Captions{% endif %}" />
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Real-time AI speech-to-text in 40+ languages.{% endif %}" />
+<meta name="twitter:image" content="{{ site.url }}/assets/images/app_icon.png" />
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}" />
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}" />
+<link rel="icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}" />
+<link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}" />
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />

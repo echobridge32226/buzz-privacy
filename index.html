@@ -1,121 +1,248 @@
 ---
 layout: default
-title: Live Captions for Every Conversation
+title: Live AI Captions for Every Conversation
+description: Real-time AI speech-to-text in 40+ languages. Instant captions, live translation, speaker diarization — on iPhone, with Android coming soon.
+full_width: true
 ---
 <style>
-  .hero {
-    text-align: center;
-    padding: 60px 0 48px;
-  }
-  .hero-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    object-fit: cover;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
-  }
-  .hero h1 {
-    font-size: 34px;
-    font-weight: 800;
-    letter-spacing: -0.8px;
-    color: #0F1115;
-    margin-bottom: 14px;
-    line-height: 1.2;
-  }
-  .hero p {
-    font-size: 17px;
-    color: #6B7280;
-    max-width: 480px;
-    margin: 0 auto 32px;
-    line-height: 1.6;
-  }
-  .store-badges {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 8px;
-  }
-  .store-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #0F1115;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background 0.15s;
-  }
-  .store-badge:hover { background: #1870FF; text-decoration: none; }
-  .links-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin-top: 48px;
-  }
-  .link-card {
-    background: #fff;
-    border: 1px solid #E5E7EB;
-    border-radius: 14px;
-    padding: 20px;
-    text-decoration: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .link-card:hover {
-    border-color: #1870FF;
-    box-shadow: 0 2px 12px rgba(24,112,255,0.08);
-    text-decoration: none;
-  }
-  .link-card-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #0F1115;
-    margin-bottom: 4px;
-  }
-  .link-card-desc {
-    font-size: 13px;
-    color: #6B7280;
-    line-height: 1.5;
-  }
+.hero { padding: 88px 0 80px; }
+.section-alt { background: var(--surface); }
+.screenshots-hero {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+.screenshots-hero img {
+  width: 150px;
+  border-radius: 24px;
+  box-shadow: 0 20px 48px rgba(0,0,0,0.14), 0 4px 12px rgba(0,0,0,0.06);
+}
+@media (max-width: 640px) {
+  .screenshots-hero img { width: 110px; }
+}
 </style>
 
 <div class="hero">
-  <img src="{{ '/assets/images/app_icon.png' | relative_url }}" alt="Buzz" class="hero-icon" />
-  <h1>Live Captions for Every Conversation</h1>
-  <p>Real-time speech-to-text in 40+ languages. Buzz transcribes meetings, lectures, and conversations — privately and accurately.</p>
-  <div class="store-badges">
-    <a href="https://apps.apple.com/app/buzz-live-captions/id6743407802" class="store-badge" target="_blank">
-      App Store
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=com.buzzliveai.buzz" class="store-badge" target="_blank">
-      Google Play
-    </a>
+  <div class="container">
+    <div class="text-center">
+      <div class="hero-tag">✦ Real-time AI Captions</div>
+      <h1>Every word,<br>instantly captured.</h1>
+      <p class="hero-subtitle">Live speech-to-text in 40+ languages. Real-time translation, speaker diarization, and searchable session history — on iPhone, with Android coming soon.</p>
+      <div class="hero-actions">
+        <a href="/download.html" class="store-badge">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          iPhone — App Store
+        </a>
+        <span class="store-badge" style="opacity:0.45;cursor:default">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M3.18 23.76c.33.18.7.19 1.05.02l11.62-6.54-2.67-2.67-9.99 9.19M.5 1.26C.18 1.62 0 2.16 0 2.85v18.3c0 .69.18 1.23.51 1.59l.08.08 10.25-10.25v-.24L.58 1.18.5 1.26M16.6 11.28 13.28 8l-12.77 7.2 3.35 3.35 12.74-7.27M21.43 10.5l-3.05-1.72-3.62 3.62 3.62 3.62 3.05-1.73c.87-.49.87-1.29 0-1.79z"/></svg>
+          Android — coming soon
+        </span>
+        <a href="{{ '/features.html' | relative_url }}" class="btn btn-secondary btn-lg">Explore features</a>
+      </div>
+
+      <div class="screenshots-hero">
+        <img src="{{ '/assets/images/screenshots/home.png' | relative_url }}" alt="Buzz home screen" loading="lazy" />
+        <img src="{{ '/assets/images/screenshots/new-session.png' | relative_url }}" alt="New session setup" loading="lazy" />
+        <img src="{{ '/assets/images/screenshots/live-captions.png' | relative_url }}" alt="Live captions with translation" loading="lazy" />
+        <img src="{{ '/assets/images/screenshots/history.png' | relative_url }}" alt="Session history" loading="lazy" />
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="links-grid">
-  <a href="{{ '/privacy.html' | relative_url }}" class="link-card">
-    <div class="link-card-title">Privacy Policy</div>
-    <div class="link-card-desc">How we collect, use, and protect your data</div>
-  </a>
-  <a href="{{ '/terms.html' | relative_url }}" class="link-card">
-    <div class="link-card-title">Terms of Service</div>
-    <div class="link-card-desc">Rules and conditions for using Buzz</div>
-  </a>
-  <a href="{{ '/delete-data.html' | relative_url }}" class="link-card">
-    <div class="link-card-title">Delete Data</div>
-    <div class="link-card-desc">Request deletion of your session data</div>
-  </a>
-  <a href="{{ '/delete-account.html' | relative_url }}" class="link-card">
-    <div class="link-card-title">Delete Account</div>
-    <div class="link-card-desc">Permanently remove your account and all data</div>
-  </a>
-  <a href="{{ '/languages.html' | relative_url }}" class="link-card">
-    <div class="link-card-title">Supported Languages</div>
-    <div class="link-card-desc">Full list of languages available for transcription</div>
-  </a>
+<!-- Stats -->
+<div class="section-alt">
+  <div class="container">
+    <div class="section-sm">
+      <div class="stat-strip">
+        <div>
+          <div class="stat-num">40+</div>
+          <div class="stat-label">Languages supported</div>
+        </div>
+        <div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">AI speech providers</div>
+        </div>
+        <div>
+          <div class="stat-num">10</div>
+          <div class="stat-label">Max group participants</div>
+        </div>
+        <div>
+          <div class="stat-num">50MB</div>
+          <div class="stat-label">Max audio file import</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<div class="section">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <div class="section-tag">Features</div>
+      <h2>Everything you need for<br>better comprehension</h2>
+      <p>From live meetings to uploaded voice notes — Buzz handles it all, privately and accurately.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
+        </div>
+        <h3>Live Captions</h3>
+        <p>Real-time speech-to-text streamed over WebSocket with sub-second latency. Powered by Deepgram Nova-3, Sarvam, and Gladia.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Live Translation</h3>
+        <p>Translate captions in real time to English, Spanish, French, Japanese, Hindi, Arabic, and more — via DeepL, Sarvam, and Google.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Speaker Diarization</h3>
+        <p>Automatically identify and label multiple speakers. Rename "Speaker 1" to "Alice" — labels persist across your session history.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+        <h3>Voice Note Import</h3>
+        <p>Upload MP3, M4A, OGG, WAV, CAF, and more — up to 50 MB. Transcribe WhatsApp voice messages, iMessage audio, or recordings.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3>Session History</h3>
+        <p>Every session is saved and searchable. Edit transcript segments, fix names, add corrections — your history, your words.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Private by Design</h3>
+        <p>Audio is never stored. Transcripts are encrypted at rest with AES-256. No data sold, no AI training on your content.</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="{{ '/features.html' | relative_url }}" class="btn btn-secondary">All features →</a>
+    </div>
+  </div>
+</div>
+
+<!-- How it works -->
+<div class="section-alt">
+  <div class="container">
+    <div class="section">
+      <div class="section-header centered reveal">
+        <div class="section-tag">How it works</div>
+        <h2>From speech to searchable text<br>in three steps</h2>
+      </div>
+      <div class="how-grid">
+        <div class="how-step reveal">
+          <div class="how-num">1</div>
+          <h3>Choose a language</h3>
+          <p>Pick from 40+ languages with automatic provider routing to the best available AI model for your selection.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-num">2</div>
+          <h3>Start speaking</h3>
+          <p>Buzz streams your audio over an encrypted WebSocket connection. Captions appear in under a second.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-num">3</div>
+          <h3>Review &amp; export</h3>
+          <p>Edit, search, and share your transcript. Export to PDF (Pro) or plain text — with full multi-script font support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Use cases strip -->
+<div class="section">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <div class="section-tag">Use Cases</div>
+      <h2>Built for how people actually work</h2>
+    </div>
+    <div class="grid-3 reveal">
+      <a href="{{ '/use-cases.html' | relative_url }}" class="card card-hover" style="text-decoration:none">
+        <div style="font-size:24px;margin-bottom:10px">🎙️</div>
+        <h3 style="font-size:15px;margin-bottom:6px">Meetings &amp; Calls</h3>
+        <p style="font-size:13px;color:var(--text-muted)">Speaker-labeled transcripts for every participant, searchable history, and PDF export.</p>
+      </a>
+      <a href="{{ '/use-cases.html' | relative_url }}" class="card card-hover" style="text-decoration:none">
+        <div style="font-size:24px;margin-bottom:10px">🌍</div>
+        <h3 style="font-size:15px;margin-bottom:6px">Travel &amp; Translation</h3>
+        <p style="font-size:13px;color:var(--text-muted)">Speak in any language, read captions in yours — real-time, no delay.</p>
+      </a>
+      <a href="{{ '/use-cases.html' | relative_url }}" class="card card-hover" style="text-decoration:none">
+        <div style="font-size:24px;margin-bottom:10px">🎓</div>
+        <h3 style="font-size:15px;margin-bottom:6px">Lectures &amp; Classes</h3>
+        <p style="font-size:13px;color:var(--text-muted)">Follow along in real time and review what was said, word for word.</p>
+      </a>
+      <a href="{{ '/use-cases.html' | relative_url }}" class="card card-hover" style="text-decoration:none">
+        <div style="font-size:24px;margin-bottom:10px">♿</div>
+        <h3 style="font-size:15px;margin-bottom:6px">Accessibility</h3>
+        <p style="font-size:13px;color:var(--text-muted)">Live captions for the deaf and hard of hearing in any environment.</p>
+      </a>
+      <a href="{{ '/use-cases.html' | relative_url }}" class="card card-hover" style="text-decoration:none">
+        <div style="font-size:24px;margin-bottom:10px">💬</div>
+        <h3 style="font-size:15px;margin-bottom:6px">Voice Notes</h3>
+        <p style="font-size:13px;color:var(--text-muted)">Transcribe WhatsApp, Telegram, and iMessage voice messages instantly.</p>
+      </a>
+      <a href="{{ '/use-cases.html' | relative_url }}" class="card card-hover" style="text-decoration:none">
+        <div style="font-size:24px;margin-bottom:10px">🎙</div>
+        <h3 style="font-size:15px;margin-bottom:6px">Podcasts &amp; Interviews</h3>
+        <p style="font-size:13px;color:var(--text-muted)">Upload recordings and get speaker-diarized, searchable transcripts in minutes.</p>
+      </a>
+    </div>
+    <div class="text-center mt-8">
+      <a href="{{ '/use-cases.html' | relative_url }}" class="btn btn-secondary">See all use cases →</a>
+    </div>
+  </div>
+</div>
+
+<!-- Providers -->
+<div class="section-alt">
+  <div class="section-sm">
+    <div class="container">
+      <p class="text-center text-muted text-small mb-6" style="text-transform:uppercase;letter-spacing:0.5px;font-weight:600">Powered by leading AI providers</p>
+      <div class="providers-row">
+        <div class="provider-chip">Deepgram Nova-3</div>
+        <div class="provider-chip">Sarvam saaras:v3</div>
+        <div class="provider-chip">Gladia</div>
+        <div class="provider-chip">Google STT</div>
+        <div class="provider-chip">DeepL</div>
+        <div class="provider-chip">Google Translate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section">
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2>Start captioning for free</h2>
+      <p>60 minutes a day, no credit card required. Upgrade when you're ready.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="/download.html" class="store-badge">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          iPhone — App Store
+        </a>
+        <span class="store-badge" style="opacity:0.45;cursor:default">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M3.18 23.76c.33.18.7.19 1.05.02l11.62-6.54-2.67-2.67-9.99 9.19M.5 1.26C.18 1.62 0 2.16 0 2.85v18.3c0 .69.18 1.23.51 1.59l.08.08 10.25-10.25v-.24L.58 1.18.5 1.26M16.6 11.28 13.28 8l-12.77 7.2 3.35 3.35 12.74-7.27M21.43 10.5l-3.05-1.72-3.62 3.62 3.62 3.62 3.05-1.73c.87-.49.87-1.29 0-1.79z"/></svg>
+          Android — coming soon
+        </span>
+      </div>
+    </div>
+  </div>
 </div>

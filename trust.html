@@ -1,0 +1,380 @@
+---
+layout: default
+title: Privacy & Trust
+description: Buzz Captions never stores your audio, encrypts all transcripts with AES-256, and never sells your data. Privacy is built into the architecture.
+full_width: true
+---
+<style>
+.trust-hero {
+  background: linear-gradient(160deg, #0F1115 0%, #1a2340 60%, #0F1115 100%);
+  padding: 88px 0 80px;
+  color: #fff;
+}
+.trust-hero .section-tag { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); }
+.trust-hero h1 { color: #fff; }
+.trust-hero p { color: rgba(255,255,255,0.7); }
+.trust-section { padding: 72px 0; }
+.trust-section.alt { background: var(--surface); }
+.promise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.promise-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  text-align: center;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.promise-card:hover { border-color: var(--blue); box-shadow: 0 4px 20px rgba(24,112,255,0.08); }
+.promise-icon {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  margin: 0 auto 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+}
+.promise-icon.green { background: var(--green-bg); }
+.promise-icon.blue { background: var(--blue-xlight); }
+.promise-icon.amber { background: var(--amber-bg); }
+.promise-card h3 { font-size: 18px; margin-bottom: 10px; }
+.promise-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.flow-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.flow-row.flip { direction: rtl; }
+.flow-row.flip > * { direction: ltr; }
+.flow-visual {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+}
+.flow-step {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.flow-step:last-child { border-bottom: none; }
+.flow-num {
+  width: 28px; height: 28px;
+  background: var(--blue); color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; flex-shrink: 0;
+}
+.flow-num.red { background: var(--red); }
+.flow-num.green { background: var(--green); }
+.flow-text strong { font-size: 14px; display: block; margin-bottom: 2px; }
+.flow-text span { font-size: 13px; color: var(--text-muted); }
+.never-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.never-card {
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.never-card .x { color: var(--red); font-size: 18px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.never-card h4 { font-size: 14px; font-weight: 700; color: #991B1B; margin-bottom: 4px; }
+.never-card p { font-size: 13px; color: #DC2626; }
+.always-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.always-card {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.always-card .check { color: var(--green); font-size: 18px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.always-card h4 { font-size: 14px; font-weight: 700; color: #166534; margin-bottom: 4px; }
+.always-card p { font-size: 13px; color: #16A34A; }
+.tech-spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.tech-spec-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+.tech-spec-card .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-xmuted); margin-bottom: 8px; }
+.tech-spec-card .value { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.tech-spec-card p { font-size: 13px; color: var(--text-muted); }
+@media (max-width: 768px) {
+  .promise-grid { grid-template-columns: 1fr; }
+  .flow-row { grid-template-columns: 1fr; gap: 32px; }
+  .flow-row.flip { direction: ltr; }
+  .never-grid, .always-grid { grid-template-columns: 1fr; }
+  .tech-spec-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .tech-spec-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="trust-hero">
+  <div class="container">
+    <div class="section-tag">Privacy &amp; Trust</div>
+    <h1 style="max-width:600px">Your audio disappears<br>the moment it's transcribed.</h1>
+    <p style="font-size:18px;max-width:560px;margin-top:14px;line-height:1.6">Privacy isn't a feature we bolted on. It's how Buzz is architected — from the WebSocket stream to the database row.</p>
+    <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:600;color:#fff">
+        <span style="color:#22C55E">●</span> Audio never stored
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:600;color:#fff">
+        🔒 AES-256 encrypted
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:600;color:#fff">
+        🚫 Data never sold
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Three pillars -->
+<div class="trust-section">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <div class="section-tag">Our commitments</div>
+      <h2>Three promises we keep<br>without exception</h2>
+    </div>
+    <div class="promise-grid">
+      <div class="promise-card reveal">
+        <div class="promise-icon green">🎙️</div>
+        <h3>Audio is never stored</h3>
+        <p>Your microphone audio streams to our servers in real time and is immediately forwarded to the transcription provider. It passes through memory only — never written to disk, never logged, never retained. When your session ends, the buffers are cleared.</p>
+      </div>
+      <div class="promise-card reveal">
+        <div class="promise-icon blue">🔒</div>
+        <h3>Transcripts are encrypted</h3>
+        <p>Every line of your transcript is encrypted with AES-256 before being stored in the database. The encryption key is held server-side and never exposed to the app. Even our own infrastructure can't read your transcripts in plain text without the key.</p>
+      </div>
+      <div class="promise-card reveal">
+        <div class="promise-icon amber">🚫</div>
+        <h3>Your data is never sold</h3>
+        <p>We do not sell your personal information, audio, or transcript content to any third party — ever. Buzz has no proprietary AI models and cannot train on your data. We are actively working to formalise data-processing agreements with our third-party providers (Deepgram, Sarvam, Gladia, Google, DeepL) that prohibit training on your data. Your conversations are yours.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Audio lifecycle -->
+<div class="trust-section alt">
+  <div class="container">
+    <div class="flow-row">
+      <div>
+        <div class="section-tag">Audio lifecycle</div>
+        <h2>What happens to your<br>audio, step by step</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0">Every millisecond of audio follows the same path — and disappears at the end of it.</p>
+        <a href="{{ '/privacy.html' | relative_url }}" class="btn btn-secondary mt-6">Full privacy policy →</a>
+      </div>
+      <div class="flow-visual reveal">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div class="flow-text">
+            <strong>Microphone capture</strong>
+            <span>Audio captured on your device as PCM frames</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-text">
+            <strong>Encrypted WebSocket transmission</strong>
+            <span>Streamed to Buzz servers over TLS — in transit, always encrypted</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">3</div>
+          <div class="flow-text">
+            <strong>In-memory forwarding</strong>
+            <span>Server holds audio in RAM and immediately forwards it to the STT provider</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">4</div>
+          <div class="flow-text">
+            <strong>Transcription returned</strong>
+            <span>STT provider returns text — no audio is retained by them beyond their own terms</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num green">5</div>
+          <div class="flow-text">
+            <strong>Transcript stored (encrypted)</strong>
+            <span>Text is AES-256 encrypted and saved to Firestore under your account</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num red">✕</div>
+          <div class="flow-text">
+            <strong>Audio discarded permanently</strong>
+            <span>All in-memory audio buffers are cleared when the session ends</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Never / Always -->
+<div class="trust-section">
+  <div class="container">
+    <div class="grid-2" style="gap:48px">
+      <div class="reveal">
+        <div class="section-tag" style="margin-bottom:24px">What we never do</div>
+        <div class="never-grid">
+          <div class="never-card">
+            <div class="x">✕</div>
+            <div>
+              <h4>Store your audio</h4>
+              <p>Audio is in-memory only and discarded immediately</p>
+            </div>
+          </div>
+          <div class="never-card">
+            <div class="x">✕</div>
+            <div>
+              <h4>Sell your data</h4>
+              <p>We never sell or share personal data with advertisers</p>
+            </div>
+          </div>
+          <div class="never-card">
+            <div class="x">✕</div>
+            <div>
+              <h4>Train AI on your content</h4>
+              <p>We have no proprietary models and cannot train on your data. We're working to formalise this with third-party providers.</p>
+            </div>
+          </div>
+          <div class="never-card">
+            <div class="x">✕</div>
+            <div>
+              <h4>Store payment details</h4>
+              <p>All billing handled by Apple, Google, and RevenueCat</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-tag" style="margin-bottom:24px">What we always do</div>
+        <div class="always-grid">
+          <div class="always-card">
+            <div class="check">✓</div>
+            <div>
+              <h4>Encrypt in transit</h4>
+              <p>HTTPS/TLS on every connection, always</p>
+            </div>
+          </div>
+          <div class="always-card">
+            <div class="check">✓</div>
+            <div>
+              <h4>Encrypt at rest</h4>
+              <p>AES-256 on every transcript segment in our database</p>
+            </div>
+          </div>
+          <div class="always-card">
+            <div class="check">✓</div>
+            <div>
+              <h4>Auto-delete sessions</h4>
+              <p>Sessions are deleted after 7, 30, or 90 days by plan</p>
+            </div>
+          </div>
+          <div class="always-card">
+            <div class="check">✓</div>
+            <div>
+              <h4>Honor deletion requests</h4>
+              <p>Full account and data deletion within 7 days of request</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Technical specs -->
+<div class="trust-section alt">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <div class="section-tag">Technical details</div>
+      <h2>Security at every layer</h2>
+    </div>
+    <div class="tech-spec-grid reveal">
+      <div class="tech-spec-card">
+        <div class="label">Transcript encryption</div>
+        <div class="value">AES-256</div>
+        <p>Applied field-by-field before writing to Firestore. The key is never exposed to the client.</p>
+      </div>
+      <div class="tech-spec-card">
+        <div class="label">Transport security</div>
+        <div class="value">HTTPS / TLS</div>
+        <p>All API calls and WebSocket connections are encrypted in transit. No plain HTTP.</p>
+      </div>
+      <div class="tech-spec-card">
+        <div class="label">API authentication</div>
+        <div class="value">Firebase App Check</div>
+        <p>AppAttest (iOS) and PlayIntegrity (Android) block unauthorized API access.</p>
+      </div>
+      <div class="tech-spec-card">
+        <div class="label">Audio retention</div>
+        <div class="value">Zero bytes</div>
+        <p>Audio is never written to disk. In-memory buffers are cleared at session end.</p>
+      </div>
+      <div class="tech-spec-card">
+        <div class="label">Session auto-delete</div>
+        <div class="value">7 / 30 / 90 days</div>
+        <p>Sessions older than your plan's limit are automatically and permanently deleted.</p>
+      </div>
+      <div class="tech-spec-card">
+        <div class="label">Payment data</div>
+        <div class="value">Never reaches us</div>
+        <p>Billing handled entirely by Apple App Store, Google Play, and RevenueCat.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third-party transparency -->
+<div class="trust-section">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <div class="section-tag">Transparency</div>
+      <h2>Third-party providers we use</h2>
+      <p>Audio and text are processed by leading AI providers. Here's who gets what, and why.</p>
+    </div>
+    <div style="overflow-x:auto" class="reveal">
+      <table style="width:100%;border-collapse:collapse;font-size:14px">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:10px 14px;background:var(--bg);border:1px solid var(--border);font-size:13px">Provider</th>
+            <th style="text-align:left;padding:10px 14px;background:var(--bg);border:1px solid var(--border);font-size:13px">What they receive</th>
+            <th style="text-align:left;padding:10px 14px;background:var(--bg);border:1px solid var(--border);font-size:13px">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:10px 14px;border:1px solid var(--border)"><strong>Deepgram</strong></td><td style="padding:10px 14px;border:1px solid var(--border)">Audio stream (live &amp; file)</td><td style="padding:10px 14px;border:1px solid var(--border)">Speech-to-text (Western languages)</td></tr>
+          <tr><td style="padding:10px 14px;border:1px solid var(--border)"><strong>Sarvam AI</strong></td><td style="padding:10px 14px;border:1px solid var(--border)">Audio stream; transcript text</td><td style="padding:10px 14px;border:1px solid var(--border)">STT &amp; translation (Indic languages)</td></tr>
+          <tr><td style="padding:10px 14px;border:1px solid var(--border)"><strong>Gladia</strong></td><td style="padding:10px 14px;border:1px solid var(--border)">Audio stream</td><td style="padding:10px 14px;border:1px solid var(--border)">Speech-to-text (multilingual, code-switching)</td></tr>
+          <tr><td style="padding:10px 14px;border:1px solid var(--border)"><strong>Google Cloud</strong></td><td style="padding:10px 14px;border:1px solid var(--border)">Audio stream; transcript text</td><td style="padding:10px 14px;border:1px solid var(--border)">STT fallback &amp; translation</td></tr>
+          <tr><td style="padding:10px 14px;border:1px solid var(--border)"><strong>DeepL</strong></td><td style="padding:10px 14px;border:1px solid var(--border)">Transcript text</td><td style="padding:10px 14px;border:1px solid var(--border)">Translation (Western languages)</td></tr>
+          <tr><td style="padding:10px 14px;border:1px solid var(--border)"><strong>Firebase (Google)</strong></td><td style="padding:10px 14px;border:1px solid var(--border)">Account info, encrypted session data</td><td style="padding:10px 14px;border:1px solid var(--border)">Authentication &amp; database</td></tr>
+          <tr><td style="padding:10px 14px;border:1px solid var(--border)"><strong>RevenueCat</strong></td><td style="padding:10px 14px;border:1px solid var(--border)">Account ID, subscription state</td><td style="padding:10px 14px;border:1px solid var(--border)">Subscription management</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-center text-muted text-small mt-6">We are actively working to formalise data-processing agreements with each provider that prohibit training on your data. Refer to each provider's privacy policy for their current stance.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" class="reveal">
+      <div class="card" style="text-align:center;padding:40px">
+        <div style="font-size:32px;margin-bottom:12px">📄</div>
+        <h3 style="margin-bottom:8px">Full privacy policy</h3>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:20px">Read the complete legal document covering all data practices.</p>
+        <a href="{{ '/privacy.html' | relative_url }}" class="btn btn-secondary">Read privacy policy</a>
+      </div>
+      <div class="card" style="text-align:center;padding:40px">
+        <div style="font-size:32px;margin-bottom:12px">🗑️</div>
+        <h3 style="margin-bottom:8px">Delete your data</h3>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:20px">Request deletion of your account and all associated data.</p>
+        <a href="{{ '/delete-account.html' | relative_url }}" class="btn btn-secondary">Delete account</a>
+      </div>
+    </div>
+  </div>
+</div>

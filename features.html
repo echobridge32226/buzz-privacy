@@ -1,0 +1,427 @@
+---
+layout: default
+title: Features
+description: Deep dive into every feature Buzz Captions offers — live transcription, real-time translation, speaker diarization, voice note import, export, and more.
+full_width: true
+---
+<style>
+.features-hero { background: linear-gradient(160deg,#fff 0%,var(--blue-xlight) 60%,var(--bg) 100%); padding:72px 0 60px; }
+.feature-section { padding: 72px 0; }
+.feature-section.alt { background: var(--surface); }
+.feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.feature-row.flip { direction: rtl; }
+.feature-row.flip > * { direction: ltr; }
+.feature-visual {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.feature-bullet { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 14px; color: #374151; }
+.feature-bullet svg { color: var(--blue); flex-shrink: 0; margin-top: 2px; }
+.spec-row { display: flex; justify-content: space-between; font-size: 13px; padding: 8px 0; border-bottom: 1px solid var(--border-subtle); }
+.spec-row:last-child { border-bottom: none; }
+.spec-key { color: var(--text-muted); font-weight: 500; }
+.spec-val { color: var(--text); font-weight: 600; }
+.provider-row-sm { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+@media (max-width: 768px) {
+  .feature-row { grid-template-columns: 1fr; gap: 32px; }
+  .feature-row.flip { direction: ltr; }
+}
+</style>
+
+<div class="features-hero">
+  <div class="container">
+    <div class="section-tag">Features</div>
+    <h1>Powerful captions.<br>No compromise.</h1>
+    <p style="font-size:18px;color:var(--text-muted);max-width:560px;margin-top:12px">Every feature in Buzz is grounded in real infrastructure — not marketing fluff. Here's what's actually under the hood.</p>
+  </div>
+</div>
+
+<!-- Live Transcription -->
+<div class="feature-section">
+  <div class="container">
+    <div class="feature-row">
+      <div>
+        <div class="section-tag">Core</div>
+        <h2>Real-time<br>transcription</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Your audio streams directly to AI speech engines over an encrypted WebSocket connection. Captions appear in under a second — not after you finish speaking.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          WebSocket binary streaming — continuous, not push-to-talk
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Deepgram Nova-3 for English and major Western languages
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Sarvam saaras:v3 for 23 Indic languages (Hindi, Tamil, Bengali, and more)
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Gladia for multilingual code-switching sessions (up to 10 language hints)
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Per-segment confidence scores for quality feedback
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <strong>Flip for other person</strong> — one tap rotates captions 180° so the person across from you can read them face-on. Solo sessions only.
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:0.5px;margin-bottom:4px">STREAM SPECS</div>
+        <div class="spec-row"><span class="spec-key">Protocol</span><span class="spec-val">WebSocket (binary frames)</span></div>
+        <div class="spec-row"><span class="spec-key">Audio encoding</span><span class="spec-val">PCM / linear16</span></div>
+        <div class="spec-row"><span class="spec-key">Max session duration</span><span class="spec-val">4 hours</span></div>
+        <div class="spec-row"><span class="spec-key">Segment output</span><span class="spec-val">Interim + final results</span></div>
+        <div class="spec-row"><span class="spec-key">Primary STT (Western)</span><span class="spec-val">Deepgram Nova-3</span></div>
+        <div class="spec-row"><span class="spec-key">Primary STT (Indic)</span><span class="spec-val">Sarvam saaras:v3</span></div>
+        <div class="spec-row"><span class="spec-key">Fallback</span><span class="spec-val">Gladia → Google STT</span></div>
+        <div class="provider-row-sm">
+          <span class="badge badge-deepgram">Deepgram</span>
+          <span class="badge badge-sarvam">Sarvam</span>
+          <span class="badge badge-gladia">Gladia</span>
+          <span class="badge badge-google">Google STT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Translation -->
+<div class="feature-section alt">
+  <div class="container">
+    <div class="feature-row flip">
+      <div>
+        <div class="section-tag">Translation</div>
+        <h2>Live translation,<br>every session</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Enable translation before you start and captions are translated in real time to your chosen language. No waiting — both the original and translation appear together.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Sarvam AI for Indic ↔ Indic and Indic → English translation
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          DeepL for Western languages: EN, ES, FR, DE, JA, ZH, KO, AR, PT, HI
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Google Translate as universal fallback for all other pairs
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Re-translate any completed session to a different target language
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Available on Basic (→ English only) and Pro (→ all languages) plans
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:0.5px;margin-bottom:4px">TRANSLATION ROUTING</div>
+        <div class="spec-row"><span class="spec-key">Indic → Indic / English</span><span class="spec-val">Sarvam AI</span></div>
+        <div class="spec-row"><span class="spec-key">Western → DeepL targets</span><span class="spec-val">DeepL</span></div>
+        <div class="spec-row"><span class="spec-key">All other pairs</span><span class="spec-val">Google Translate</span></div>
+        <div class="spec-row"><span class="spec-key">DeepL targets</span><span class="spec-val">EN, ES, FR, DE, JA, ZH, KO, AR, PT, HI</span></div>
+        <div class="spec-row"><span class="spec-key">Sarvam targets</span><span class="spec-val">23 Indic + English</span></div>
+        <div class="spec-row"><span class="spec-key">Basic plan</span><span class="spec-val">→ English only</span></div>
+        <div class="spec-row"><span class="spec-key">Pro plan</span><span class="spec-val">→ Any language</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Speaker Diarization -->
+<div class="feature-section">
+  <div class="container">
+    <div class="feature-row">
+      <div>
+        <div class="section-tag">Diarization</div>
+        <h2>Know who said<br>what, when</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Speaker diarization automatically separates different voices and assigns color-coded labels. Rename any speaker to their real name — labels are saved with the session.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Powered by Deepgram for all Western and English sessions
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Enabled by default — toggle off if not needed
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Custom speaker names persist in transcript and PDF export
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Always-on for voice note uploads via Deepgram (non-Indic) — Sarvam is used for Indic languages
+        </div>
+        <div class="feature-bullet" style="color:var(--text-muted)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Not available for Indic languages (Sarvam limitation)
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="background:rgba(24,112,255,0.08);border-radius:10px;padding:12px 14px">
+            <div style="font-size:11px;font-weight:700;color:#1870FF;margin-bottom:4px">SPEAKER 1 · Alice</div>
+            <div style="font-size:13px;color:var(--text)">I think we should prioritize the redesign this quarter.</div>
+          </div>
+          <div style="background:rgba(124,58,237,0.08);border-radius:10px;padding:12px 14px">
+            <div style="font-size:11px;font-weight:700;color:#7C3AED;margin-bottom:4px">SPEAKER 2 · Ben</div>
+            <div style="font-size:13px;color:var(--text)">Agreed — but we need to align on scope first.</div>
+          </div>
+          <div style="background:rgba(22,163,74,0.08);border-radius:10px;padding:12px 14px">
+            <div style="font-size:11px;font-weight:700;color:#16A34A;margin-bottom:4px">SPEAKER 3</div>
+            <div style="font-size:13px;color:var(--text)">Can we schedule a dedicated call for that?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Voice Notes -->
+<div class="feature-section alt">
+  <div class="container">
+    <div class="feature-row flip">
+      <div>
+        <div class="section-tag">Import</div>
+        <h2>Transcribe any<br>audio file</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Upload any audio or voice message and get a complete, speaker-diarized transcript in seconds. Works with WhatsApp, Telegram, iMessage, and any recording app.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Formats: MP3, M4A, AAC, OGG, WAV, WebM, FLAC, CAF, MP4
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Max file size: 50 MB
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Speaker diarization always enabled for uploaded audio
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Optional translation at upload time
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Saved to session history like any live session
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:0.5px;margin-bottom:8px">SUPPORTED FORMATS</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="badge badge-blue">MP3</span>
+          <span class="badge badge-blue">M4A</span>
+          <span class="badge badge-blue">AAC</span>
+          <span class="badge badge-blue">OGG</span>
+          <span class="badge badge-blue">WAV</span>
+          <span class="badge badge-blue">WebM</span>
+          <span class="badge badge-blue">FLAC</span>
+          <span class="badge badge-blue">CAF</span>
+          <span class="badge badge-blue">MP4</span>
+        </div>
+        <div style="margin-top:16px;font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:0.5px;margin-bottom:8px">SOURCES OPTIMIZED FOR</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="badge badge-green">WhatsApp</span>
+          <span class="badge badge-green">Telegram</span>
+          <span class="badge badge-green">iMessage</span>
+          <span class="badge badge-green">Voice Memos</span>
+          <span class="badge badge-green">Recordings</span>
+        </div>
+        <div style="margin-top:16px" class="spec-row"><span class="spec-key">Max size</span><span class="spec-val">50 MB</span></div>
+        <div class="spec-row"><span class="spec-key">Powered by</span><span class="spec-val">Deepgram (non-Indic) / Sarvam (Indic)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Export -->
+<div class="feature-section">
+  <div class="container">
+    <div class="feature-row">
+      <div>
+        <div class="section-tag">Export</div>
+        <h2>Your transcript,<br>your format</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Share transcripts instantly or export them as polished PDFs with speaker labels, timestamps, and full multi-script font support.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Share as plain text or export as PDF — Pro plan only
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          PDF includes title, date, duration, word count, speaker count, language
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Multi-script fonts: Devanagari, Arabic, Thai, Tamil, Telugu, Sinhala, CJK, and more
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Colored speaker indicators in diarized PDFs
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:0.5px;margin-bottom:8px">EXPORT FORMATS</div>
+        <div class="spec-row"><span class="spec-key">Plain text share</span><span class="spec-val"><span class="pro-badge">PRO</span></span></div>
+        <div class="spec-row"><span class="spec-key">PDF export</span><span class="spec-val"><span class="pro-badge">PRO</span></span></div>
+        <div style="margin-top:16px;font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:0.5px;margin-bottom:8px">PDF INCLUDES</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="badge badge-blue">Speaker labels</span>
+          <span class="badge badge-blue">Timestamps</span>
+          <span class="badge badge-blue">Word count</span>
+          <span class="badge badge-blue">Duration</span>
+          <span class="badge badge-blue">Translation</span>
+          <span class="badge badge-blue">Multi-script fonts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Group Sessions -->
+<div class="feature-section alt">
+  <div class="container">
+    <div class="feature-row flip">
+      <div>
+        <div class="section-tag">Collaboration</div>
+        <h2>Live group sessions<br>up to 10 people</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Start a group session and invite others with a QR code or a 6-character join code. Each participant has their own audio stream — everyone's voice is transcribed separately.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Up to 10 participants per session
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Join via QR code or 6-character alphanumeric code
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Independent audio streams — no crosstalk issues
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Full session history and transcript saved for the host
+        </div>
+      </div>
+      <div class="feature-visual" style="align-items:center;justify-content:center;text-align:center">
+        <div style="font-size:48px;margin-bottom:12px">👥</div>
+        <div style="font-size:18px;font-weight:800;letter-spacing:2px;font-family:monospace;background:var(--surface);border:1px solid var(--border);padding:10px 20px;border-radius:var(--radius);margin-bottom:12px">BZ · 4R7K</div>
+        <div style="font-size:13px;color:var(--text-muted)">Share this code or scan QR to join</div>
+        <div style="margin-top:16px;display:flex;gap:8px;justify-content:center">
+          <span class="badge badge-green">3 / 10 joined</span>
+          <span class="badge badge-blue">Live</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Privacy -->
+<div class="feature-section">
+  <div class="container">
+    <div class="feature-row">
+      <div>
+        <div class="section-tag">Privacy</div>
+        <h2>Private by design,<br>not just policy</h2>
+        <p style="font-size:16px;color:var(--text-muted);margin:14px 0 24px">Your audio is never recorded or stored. Transcripts are encrypted at rest. We don't sell your data or use your content to train AI models.</p>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Audio passes through server memory only — never written to disk
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Transcript text encrypted at rest with AES-256
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          All connections over HTTPS/TLS
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Firebase App Check (AppAttest / PlayIntegrity) prevents unauthorized API access
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Auto-delete sessions by plan tier (7 / 30 / 90 days)
+        </div>
+        <div class="feature-bullet">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Full account &amp; data deletion on request
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:0.5px;margin-bottom:8px">SECURITY AT A GLANCE</div>
+        <div class="spec-row"><span class="spec-key">Audio storage</span><span class="spec-val compare-yes">Never stored</span></div>
+        <div class="spec-row"><span class="spec-key">Transcript encryption</span><span class="spec-val compare-yes">AES-256 at rest</span></div>
+        <div class="spec-row"><span class="spec-key">Transport</span><span class="spec-val compare-yes">HTTPS/TLS always</span></div>
+        <div class="spec-row"><span class="spec-key">API security</span><span class="spec-val compare-yes">Firebase App Check</span></div>
+        <div class="spec-row"><span class="spec-key">Data sold</span><span class="spec-val" style="color:var(--red)">Never</span></div>
+        <div class="spec-row"><span class="spec-key">AI training on your data</span><span class="spec-val" style="color:var(--red)">Never</span></div>
+        <div class="spec-row"><span class="spec-key">Payment data stored</span><span class="spec-val" style="color:var(--red)">Never (Apple/Google/RC)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Session History & Editing -->
+<div class="feature-section alt">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <div class="section-tag">History</div>
+      <h2>Every session saved and editable</h2>
+      <p>Your sessions are organized chronologically. Edit any segment, fix a mistranscription, or rename a speaker. Your edits are saved immediately.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Searchable history</h3>
+        <p>Find any session by date or scroll through your full history. 20 sessions per page with cursor-based pagination.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <h3>Inline transcript editing</h3>
+        <p>Tap any segment to correct a word or phrase. Edits are saved server-side so they persist across devices.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Retention by plan</h3>
+        <p>Free keeps sessions for 7 days. Basic for 30. Pro for 90. Sessions older than your limit are automatically deleted.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section">
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2>Ready to try it?</h2>
+      <p>Free plan includes 60 minutes a day. No credit card required.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="/download.html" class="store-badge">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          iPhone — App Store
+        </a>
+        <span class="store-badge" style="opacity:0.45;cursor:default">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M3.18 23.76c.33.18.7.19 1.05.02l11.62-6.54-2.67-2.67-9.99 9.19M.5 1.26C.18 1.62 0 2.16 0 2.85v18.3c0 .69.18 1.23.51 1.59l.08.08 10.25-10.25v-.24L.58 1.18.5 1.26M16.6 11.28 13.28 8l-12.77 7.2 3.35 3.35 12.74-7.27M21.43 10.5l-3.05-1.72-3.62 3.62 3.62 3.62 3.05-1.73c.87-.49.87-1.29 0-1.79z"/></svg>
+          Android — coming soon
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

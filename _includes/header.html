@@ -1,0 +1,30 @@
+<header class="site-header">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <img src="{{ '/assets/images/app_icon.png' | relative_url }}" alt="Buzz" />
+      <span>Buzz</span>
+    </a>
+    <nav class="site-nav">
+      <a href="{{ '/features.html' | relative_url }}" {% if page.url contains 'features' %}class="active"{% endif %}>Features</a>
+      <a href="{{ '/use-cases.html' | relative_url }}" {% if page.url contains 'use-cases' %}class="active"{% endif %}>Use Cases</a>
+      <a href="{{ '/pricing.html' | relative_url }}" {% if page.url contains 'pricing' %}class="active"{% endif %}>Pricing</a>
+      <a href="{{ '/languages.html' | relative_url }}" {% if page.url contains 'languages' %}class="active"{% endif %}>Languages</a>
+      <a href="{{ '/faq.html' | relative_url }}" {% if page.url contains 'faq' %}class="active"{% endif %}>FAQ</a>
+      <a href="{{ '/trust.html' | relative_url }}" {% if page.url contains 'trust' %}class="active"{% endif %}>Privacy</a>
+    </nav>
+    <div class="nav-cta-group">
+      <a href="{{ '/download.html' | relative_url }}" class="btn btn-primary btn-sm">Download</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="nav-mobile" id="mobileNav">
+  <a href="{{ '/features.html' | relative_url }}" {% if page.url contains 'features' %}class="active"{% endif %}>Features</a>
+  <a href="{{ '/use-cases.html' | relative_url }}" {% if page.url contains 'use-cases' %}class="active"{% endif %}>Use Cases</a>
+  <a href="{{ '/pricing.html' | relative_url }}" {% if page.url contains 'pricing' %}class="active"{% endif %}>Pricing</a>
+  <a href="{{ '/languages.html' | relative_url }}" {% if page.url contains 'languages' %}class="active"{% endif %}>Languages</a>
+  <a href="{{ '/faq.html' | relative_url }}" {% if page.url contains 'faq' %}class="active"{% endif %}>FAQ</a>
+  <a href="{{ '/download.html' | relative_url }}" class="btn btn-primary" style="margin-top:12px;justify-content:center;">Download</a>
+</nav>

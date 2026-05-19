@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% include head.html %}</head>
+<body>
+{% include header.html %}
+<div class="page-hero">
+  <div class="container-sm">
+    {% if page.category %}<div class="section-tag">{{ page.category }}</div>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}<p class="updated">{{ page.date | date: "%B %-d, %Y" }}</p>{% endif %}
+    {% if page.description %}<p style="font-size:18px;color:var(--text-muted);margin-top:10px">{{ page.description }}</p>{% endif %}
+  </div>
+</div>
+<main>{{ content }}</main>
+{% include footer.html %}
+</body>
+</html>
